@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"edu.escuelaing.stats","l":"LinkedListN"},{"p":"edu.escuelaing.stats","l":"LinkedListNodeN"},{"p":"edu.escuelaing.stats","l":"Statistics"}];updateSearchResults();

@@ -3,11 +3,19 @@ package edu.escuelaing.stats;
 import java.io.*;
 import java.text.DecimalFormat;
 
+/**
+ * The name of the proyect
+ */
 public class Statistics {
     private static LinkedListN<Double> dataList;
-    private static Double mean;
-    private static Double stdarDeviation;
+    public static Double mean;
+    public static Double stdarDeviation;
     private static DecimalFormat df2 = new DecimalFormat("#.##");
+
+    /**
+     * Main Method
+     * @param args
+     */
     public static void main(String[] args){
         dataList= new LinkedListN<Double>();
         File dataSet= new File(args[0]);
@@ -20,6 +28,9 @@ public class Statistics {
             }
             br.close();
             System.out.println("Los valores dados fueron: ");
+            for(Double d: dataList){
+                System.out.println(d);
+            }
             System.out.println("El valor de la media es : " + df2.format(calculateMean()));
             System.out.println("Los valor de la desviacion estandar es: " + df2.format(calculateStdarDeviation()));
         } catch (IOException error) {
@@ -42,7 +53,7 @@ public class Statistics {
     
     /**
      * Calculates the standar deviaton of the values of the dataList
-     * @return
+     * @return Double srtdarDeviation
      */
     public static Double calculateStdarDeviation(){
         Double sum= 0.0;

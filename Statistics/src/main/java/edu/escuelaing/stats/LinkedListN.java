@@ -2,12 +2,17 @@ package edu.escuelaing.stats;
 
 import java.io.Serializable;
 import java.util.*;
-
+/**
+ * Class LinkedList
+ */
 public class LinkedListN<E>  implements List<E>, Deque<E>, Cloneable, Serializable{
     private LinkedListNodeN<E> first;
     private LinkedListNodeN<E> last;
     private int size;
 
+    /**
+     *Standard LinkedList Builder
+     */
     public LinkedListN(){
         first= null;
         last= null;
@@ -16,7 +21,7 @@ public class LinkedListN<E>  implements List<E>, Deque<E>, Cloneable, Serializab
 
     /**
      * adds the first node to the LinkedList
-     * @param E e the new Element of the LinkedList
+     * @param e the new Element of the LinkedList
      */
     @Override
     public void addFirst(E e) {
@@ -29,7 +34,7 @@ public class LinkedListN<E>  implements List<E>, Deque<E>, Cloneable, Serializab
 
      /**
      * adds the first node to the LinkedList
-     * @param E e the newest Element of the LinkedList
+     * @param e the newest Element of the LinkedList
      */
     @Override
     public void addLast(E e) {
@@ -168,6 +173,10 @@ public class LinkedListN<E>  implements List<E>, Deque<E>, Cloneable, Serializab
         return size;
     }
 
+    /**
+     * returns is the LinkedList is empty
+     * @return boolean 
+     */
     @Override
     public boolean isEmpty() {
         if(size<=0) return true;
@@ -204,12 +213,6 @@ public class LinkedListN<E>  implements List<E>, Deque<E>, Cloneable, Serializab
                 }
                 return null;
             }
-
-            @Override
-            public void remove() {
-                throw new UnsupportedOperationException("This option has not been implemented yet.");
-            }
-
         };
 
     }
@@ -225,6 +228,10 @@ public class LinkedListN<E>  implements List<E>, Deque<E>, Cloneable, Serializab
         return null;
     }
 
+    /**
+     * add a new element to the linkedList
+     * @param e elemento
+     */
     @Override
     public boolean add(E e) {
         if(isEmpty()){
